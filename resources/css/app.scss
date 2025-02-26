@@ -1,0 +1,470 @@
+@mixin font_func($size, $weight, $line_height: 1.6, $color) 
+{
+	font-size: $size;
+	font-weight: $weight;
+	line-height: $line_height;
+	color: $color;
+}
+
+*
+{
+	box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.main_title
+{
+	@include font_func(24px, 800, 1.3, black);
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.main_title.cat
+{
+	color: #0347c4;
+}
+
+button
+ {
+    display: block;
+    border-radius: 5px;
+    height: 25px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 14px !important;
+    background-color: lightblue;
+ }
+
+ input, textarea
+ {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid lightblue;
+    padding: 5px 10px;
+ }
+
+ textarea
+ {
+    height: 100px;
+    padding: 5px 10px;
+ }
+
+ form
+ {
+   background-color: white;
+   margin: 20px auto;
+   width: 100%;
+   max-width: 250px;
+   padding: 20px;
+   border-radius: 20px;
+   width: 100%;
+   box-shadow: 0px 0px 20px 2px #f2f2f2;
+ }
+
+.main_wrapper
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
+}
+
+h2
+{
+	margin: 0px;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+body
+{
+	margin: 0px;
+}
+
+.hide
+{
+	display: none !important;
+}
+
+.error_text
+{
+	@include font_func(16px, 500, 1.2, red);
+	margin-top: 10px;
+}
+
+.wrap
+{
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto !important;
+	padding: 0 15px;
+}
+
+input.error,
+textarea.error
+{
+	background: #F0FFF0;
+    border: 1px red solid;
+    color: red !important;
+    box-shadow: 0px 0px 10px 1px red !important;
+}
+
+
+header
+{
+	background-color: #0347c4;
+	padding: 30px 0;
+	margin-bottom: 50px;
+
+	.menu li a
+	{
+		@include font_func(18px, 600, 1.3, white);
+	}
+
+	.menu li a.active
+	{
+		color: red !important;
+	}
+
+	h2
+	{
+		font-size: 20px !important;
+	}
+
+	.menu
+	{
+		margin: 0px;
+		padding: 0px;
+		list-style-type: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.menu li
+	{
+		margin: 10px;
+	}
+}
+
+footer
+{
+	// background-color: #1f1f1f;
+	background-color: #0347c4;
+	padding: 30px 0;
+	margin-top: 30px;
+
+	h2
+	{
+		text-align: center;
+		@include font_func(24px, 800, 1.3, white);
+	}
+}
+
+#go_out
+{
+	width: 200px;
+	margin: 30px auto;
+}
+
+.post_box
+{
+	.post_item
+	{
+		margin-bottom: 20px;
+		border: 2px solid lightblue;
+		border-radius: 20px;
+		padding: 30px;
+		background: linear-gradient(to left, rgb(248, 251, 255, 0.3), rgb(186, 222, 255, 0.3));
+	}
+
+	.post_wrap
+	{
+		margin: 0 auto;
+		width: 100%;
+		max-width: 300px;
+	}
+
+	.save_button
+	{
+		margin-bottom: 10px;
+	}
+}
+
+.pager_box
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.pager_item
+{
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+	background-color: aqua;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include font_func(18px, 600, 1.3, black);
+	margin: 0 5px;
+}
+
+.pager_item.active
+{
+	background: blue;
+}
+
+.reg_list
+{
+	margin: 10px 0 0 0;
+	padding: 0 0 0 20px;
+	text-align: justify;
+	li
+	{
+		@include font_func(12px, 500, 1.2, black);
+	}
+}
+
+.form_title
+{
+	@include font_func(20px, 600, 1.2, black);
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.cat_title
+{
+	@include font_func(16px, 600, 1.2, black);
+	margin-bottom: 10px;
+}
+
+.cat_select
+{
+	width: 100%;
+	height: 30px;
+	margin-bottom: 10px;
+}
+
+.post_name
+{
+	@include font_func(18px, 600, 1.2, black);
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.cats_list
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center; 
+	.cats_item
+	{
+		margin: 5px;
+		@include font_func(18px, 600, 1.2, black);
+	}
+}
+
+.temp_res
+{
+	@include font_func(16px, 600, 1.2, red);
+	margin-top: 10px;
+	text-align: center;
+}
+
+.opt_box
+{
+	padding: 20px;
+	background: linear-gradient(to left, rgb(248, 251, 255, 0.3), rgb(186, 222, 255, 0.3));
+	border: 2px solid lightblue;
+	margin: 10px 0;
+	border-radius: 20px;
+	display: block;
+
+	.flex_line
+	{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.prop_item
+	{
+		@include font_func(16px, 600, 1.2, black);
+		margin: 5px 0;
+		text-align: center;
+	}
+}
+
+.sort_item
+{
+	@include font_func(16px, 600, 1.2, black);
+	margin: 5px;
+}
+
+span.prev_next
+{
+	@include font_func(18px, 600, 1.2, black);
+}
+
+a.prev_next
+{
+	@include font_func(18px, 600, 1.2, blue);
+}
+
+svg.pag_arrow
+{
+	width: 30px;
+}
+
+.rounded-md.arrows_nums
+{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 10px;
+}
+
+.page_itemm
+{
+	width: 30px;
+	height: 30px;
+	background-color: aqua;
+	border-radius: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 10px;
+}
+
+.page_itemm, .page_itemm *
+{
+	@include font_func(18px, 600, 1.2, black);
+}
+
+span.page_itemm
+{
+	background-color: #0347c4;
+}
+
+span.page_itemm *
+{
+	color: #F0FFF0;
+}
+
+*
+{
+	transition: all 0.3s ease;
+}
+
+.about_reg
+{
+	@include font_func(14px, 500, 1.2, black);
+	text-align: center;
+	width: 100%;
+	max-width: 250px;
+	margin: 0 auto;
+}
+
+#users_component_vue
+{
+	.user_item 
+	{
+		margin-bottom: 20px;
+		border: 2px solid lightblue;
+		border-radius: 20px;
+		padding: 30px;
+		background: linear-gradient(to left,#f8fbff4d,#badeff4d);
+	}
+
+	.us_name, .check_title
+	{
+		@include font_func(18px, 500, 1.2, black);
+	}
+
+	.check_box
+	{
+		display: flex;
+		align-items: center;
+		margin-top: 10px;
+	}
+
+	input {
+		width: 20px;
+		height: 20px;
+		margin: 0 0 0 10px;
+	}
+}
+
+.cat_box
+{
+	height: calc(100% - 40px);
+	overflow: auto;
+
+	.cat_item
+	{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: 10px 0;
+	}
+
+	.cat_name
+	{
+		width: calc(100% - 80px);
+		@include font_func(14px, 500, 1.2, black);
+	}
+
+	.del_butt
+	{
+		width: 70px;
+	}
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.forms_flex
+{
+	display: flex;
+	justify-self: auto;
+	justify-content: space-around;
+	// align-items: flex-start;
+	flex-wrap: wrap;
+
+	form
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}
+
+@media screen and (max-width: 1000px)
+{
+	header .menu li a
+	{
+		font-size: 16px;
+	}
+}
+
+
+
+
